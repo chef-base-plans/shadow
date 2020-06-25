@@ -30,6 +30,13 @@ control 'core-plans-shadow' do
   commands_to_test = %w(chage useradd passwd chgpasswd chpasswd chsh expiry su
                         faillog gpasswd groupadd groupmems groupdel grpck userdel usermod)
 
+  commands_to_test.each do |binary|
+    describe file("#{File.join(shadow_pkg_ident, 'bin', binary)}") do
+      it { should exist }
+      it { should be_executable }
+    end
+  end
+
   commands_to_test.each do |shadow_command|
     describe command("#{File.join(shadow_pkg_ident,'bin',shadow_command)} -h") do
       its('exit_status') { should eq 0 }
