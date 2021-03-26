@@ -6,7 +6,7 @@ pkg_description="Password and account management tool suite."
 pkg_upstream_url="https://github.com/shadow-maint/shadow"
 pkg_license=('bsd')
 pkg_source="https://github.com/shadow-maint/${pkg_name}/releases/download/${pkg_version}/${pkg_name}-${pkg_version}.tar.xz"
-pkg_shasum="18c07931e15cba2f7c1de9da5fcdf1eea77639334a207a76b1e84969b8324292"
+pkg_shasum="a3ad4630bdc41372f02a647278a8c3514844295d36eefe68ece6c3a641c1ae62"
 pkg_deps=(
   core/glibc
   core/attr
